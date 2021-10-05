@@ -19,8 +19,11 @@
 
 <body>    
     <ul>
+        <!-- Begin a php statement and a for each loop to create a list element for each item in the array -->
         <?php foreach ($animals as $animal) : ?>
+            <!-- Use php temp var animal as the innerText to the list element -->
             <li><?= $animal; ?></li>
+        <!-- End the php for each loop -->
         <?php endforeach; ?>
     </ul>
 </body>
