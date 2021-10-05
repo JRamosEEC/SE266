@@ -5,7 +5,7 @@ $task = [
     'title' => 'Go for a run', 
     'due' => '8pm Today', 
     'assigned_to' => 'Lily', 
-    'completed' => false
+    'completed' => true
 ];
 
 //Send code to index view php code

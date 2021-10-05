@@ -31,10 +31,10 @@
                 <!-- Evaluate the 'completed' key to be true or false and the display if the task was completed or not -->
                 <?php if ($val) : ?>
                     <!-- Task is completed and the key = true-->
-                    <li><strong><?= $title; ?></strong> Complete</li>
+                    <li><strong><?= $title; ?></strong> <span class="icon">&#9989;</span></li>
                 <?php else : ?>
                     <!-- Task is no completed and the key = false -->
-                    <li><strong><?= $title; ?></strong> Incomplete</li> 
+                    <li><strong><?= $title; ?></strong> <span class="icon">&#10060;</span></li> 
                 <!-- End the two if statements -->
                 <?php endif; ?>
             <?php endif; ?>
