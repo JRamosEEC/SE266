@@ -24,7 +24,7 @@
         <div id="ButtonContainer" class="col-lg-8">
             <div class="row p-1">
                 <a id="homeB" class="col-lg-4 center-vertical btn btn-primary ml-auto nav-button-border" href="#" role="button">Home</a>
-                <a id="AssignmentsB" class="col-lg-4 center-vertical btn btn-primary ml-auto nav-button-border" href="../W1-C" role="button">Assignments</a>
+                <a id="AssignmentsB" class="col-lg-4 center-vertical btn btn-primary ml-auto nav-button-border" href="#" role="button">Assignments</a>
                 <a id="GitRepoB" class="col-lg-4 center-vertical btn btn-primary ml-auto nav-button-border" href="#" role="button">GitHub Repository</a>
 
                 <a id="GitResourceB" class="col-lg-4 center-vertical btn btn-primary ml-auto nav-button-border" href="#" role="button">GitHub Resources</a>
@@ -33,34 +33,6 @@
             </div>
         </div>
     </div>
-
-    <section id="home" class="">
-        <div class="title col-sm-12 center-vertical">Home Page</div>
-        
-        <div class="row ml-auto">
-            <div class=" d-flex flex-column col-sm-6 center-vertical">
-                <img src="images/featured.png" alt="featured project image">
-                <div class="img-text p-2 bd-highlight center-text section-margin">Featured Project - My Home Page</div>
-            </div>
-
-            <p class="featured-desc col-sm-6 center-vertical">This was one of the first iterations of the homepage project, and it served as our introduction to the grid system included with css. We had a some conditions to follow with a lot of room for creative decision.</p>
-        </div>
-        
-        <div class="row desc-bar container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">BIO</p>
-            <p class="desc-bar-text col-sm-9 center-vertical">Hello! My name is Justin Ramos and currently I'm a student for NEIT studying for software engineering. I'm a hardworker and I love to learn new things whenever possible. I would say it's more difficult to find me not looking something up, because whenever I have a question I always need to find some answers or research. I love to program in my free time, when I have it. I like to tackle tough concepts and big projects over the smaller ones, because there's a greater sense of accomplishments. I need a strict schedule, without one I can easily get lost so I love deadlines and a plan of action. Overall I'd say I generally just love this field. I'm learning so many new great things and I feel accomplished as I do so.</p>
-        </div>
-
-        <div class="row desc-bar container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">GitHub</p>
-            <p class="desc-bar-text col-sm-9 center-vertical">SE266.05 Repository : <a href="https://github.com/JRamosEEC/SE266" target="_blank"><u>https://github.com/JRamosEEC/SE266</u></a></p>
-        </div>
-
-        <div class="row desc-bar bar-social center-text container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">Social Media</p>
-            <div class="desc-bar-text col-sm-9 center-vertical"><a href="https://www.instagram.com/justin_d_ramos/" target="_blank"><img src="images/InstLogo.png" alt="Instagram icon with embedded link" class="social-icon"></a>                     <a href="https://www.facebook.com/justin.ramos.5872" target="_blank"><img src="images/FacebookLogo.png" alt="Facebook icon with embedded link" class="social-icon"></a></div>
-        </div>
-    </section>
 
     <footer class="row container-fluid">
         <div class="footer-bar col-sm-12 center-text center-vertical">&copy; 2021</div>
