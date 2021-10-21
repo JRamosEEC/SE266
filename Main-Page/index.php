@@ -1,2 +1,2 @@
-<?php //Begin php statement (hi)
+<?php //Begin php statement
 require "index.view.php";
