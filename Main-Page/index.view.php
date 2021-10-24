@@ -54,7 +54,11 @@
         <div class="row desc-bar container-fluid section-margin">
             <p class="desc-bar-title col-md-4 center-text center-vertical">Hobbies</p>
             
-            <p class="desc-bar-text col-md-8 center-vertical"></p>
+            <div class="col-md-8 center-vertical">
+                <a id="hobIndoor" class="row desc-bar-text center-text center-vertical" href="https://wgi.org/percussion/" role="button" target="_blank">Indoor Percussion</a>
+                <a id="hobProgramming" class="row desc-bar-text center-text center-vertical" href="https://hackr.io/blog/what-is-programming" role="button" target="_blank">Programming</a>
+                <a id="hobPiano" class="row desc-bar-text center-text center-vertical" href="https://www.youtube.com/watch?v=4y33h81phKU" role="button" target="_blank">Piano - I can play this song :)</a>
+            </div>
         </div>
 
         <div class="row desc-bar container-fluid section-margin">
@@ -78,9 +82,14 @@
 
     <script>
         var footer = document.getElementById("Footer");
-        var x = new Date(document.lastModified);
-
-        console.log(x);
+        var lastUpdate = "";
+        
+        var client = new XMLHttpRequest();
+        client.open('GET', 'lastUpdated.txt');
+        client.onreadystatechange = function() {
+            footer.innerHTML = "&copy; 2021   -   Last Modified : " + client.responseText;
+        }
+        client.send(); 
     </script>
 </body>
 

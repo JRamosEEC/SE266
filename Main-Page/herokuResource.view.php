@@ -52,33 +52,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script>
-        var mytag = document.querySelectorAll("a");
-        var home = document.getElementById("home");
-        var featured = document.getElementById("featured");
-        var gallery = document.getElementById("gallery");
-    
-        for (i = 0; i < mytag.length; i++){
-            mytag[i].addEventListener(`click`, function(e){
-                console.log(e.target.id);
-                if (e.target.id == "homeB"){
-                    home.className = "";
-                    featured.className = "hide";
-                    gallery.className = "hide";
-                }
-    
-                else if (e.target.id == "featuredB"){
-                    featured.className = "";
-                    home.className = "hide";
-                    gallery.className = "hide";
-                }
-    
-                else if (e.target.id == "galleryB"){
-                    gallery.className = "";
-                    home.className = "hide";
-                    featured.className = "hide";
-                }
-            })
+        var footer = document.getElementById("Footer");
+        var lastUpdate = "";
+        
+        var client = new XMLHttpRequest();
+        client.open('GET', 'lastUpdated.txt');
+        client.onreadystatechange = function() {
+            footer.innerHTML = "&copy; 2021   -   Last Modified : " + client.responseText;
         }
+        client.send(); 
     </script>
 </body>
 
