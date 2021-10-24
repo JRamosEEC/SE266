@@ -38,16 +38,16 @@
         <div class="title col-sm-12 center-vertical">Assignments</div>
     
         <ul>
-            <li><a href="../week1/fizz_buzz.php">Week 1 - Fizz Buzz</a></li>
-            <li><a href="../week2/patient.php">Week 2 - Patient</a></li>
-            <li><a href="../week3/atm.php">Week 3 - ATM</a></li>
-            <li><a href="../week4/viewPatients.php">Week 4</a></li>
-            <li><a href="../week5/index.php">Week 5</a></li>
-            <li><a href="../week6/index.php">Week 6</a></li>
-            <li><a href="../week7/index.php">Week 7</a></li>
-            <li><a href="../week8/index.php">Week 8</a></li>
-            <li><a href="../week9/index.php">Week 9</a></li>
-            <li><a href="../week10/index.php">Week 10</a></li>
+            <li><a href="../W1-FizzBuzz/index.php" role="button" target="_blank">Week 1 - Fizz Buzz</a></li>
+            <li><a href="../week2/patient.php" role="button" target="_blank">Week 2 - Patient</a></li>
+            <li><a href="../week3/atm.php" role="button" target="_blank">Week 3 - ATM</a></li>
+            <li><a href="../week4/viewPatients.php" role="button" target="_blank">Week 4</a></li>
+            <li><a href="../week5/index.php" role="button" target="_blank">Week 5</a></li>
+            <li><a href="../week6/index.php" role="button" target="_blank">Week 6</a></li>
+            <li><a href="../week7/index.php" role="button" target="_blank">Week 7</a></li>
+            <li><a href="../week8/index.php" role="button" target="_blank">Week 8</a></li>
+            <li><a href="../week9/index.php" role="button" target="_blank">Week 9</a></li>
+            <li><a href="../week10/index.php" role="button" target="_blank">Week 10</a></li>
         </ul>
     </section>
 
