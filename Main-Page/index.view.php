@@ -47,23 +47,29 @@
         </div>
         
         <div class="row desc-bar container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">BIO</p>
-            <p class="desc-bar-text col-sm-9 center-vertical">Hello! My name is Justin Ramos and currently I'm a student for NEIT studying for software engineering. I'm a hardworker and I love to learn new things whenever possible. I would say it's more difficult to find me not looking something up, because whenever I have a question I always need to find some answers or research. I love to program in my free time, when I have it. I like to tackle tough concepts and big projects over the smaller ones, because there's a greater sense of accomplishments. I need a strict schedule, without one I can easily get lost so I love deadlines and a plan of action. Overall I'd say I generally just love this field. I'm learning so many new great things and I feel accomplished as I do so.</p>
+            <p class="desc-bar-title col-md-4 center-text center-vertical">BIO</p>
+            <p class="desc-bar-text col-md-8 center-vertical">Hello! My name is Justin Ramos and currently I'm a student for NEIT studying for software engineering. I'm a hardworker and I love to learn new things whenever possible. I would say it's more difficult to find me not looking something up, because whenever I have a question I always need to find some answers or research. I love to program in my free time, when I have it. I like to tackle tough concepts and big projects over the smaller ones, because there's a greater sense of accomplishments. I need a strict schedule, without one I can easily get lost so I love deadlines and a plan of action. Overall I'd say I generally just love this field. I'm learning so many new great things and I feel accomplished as I do so.</p>
         </div>
 
         <div class="row desc-bar container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">GitHub</p>
-            <p class="desc-bar-text col-sm-9 center-vertical">SE266.05 Repository : <a href="https://github.com/JRamosEEC/SE266" target="_blank"><u>https://github.com/JRamosEEC/SE266</u></a></p>
+            <p class="desc-bar-title col-md-4 center-text center-vertical">Hobbies</p>
+            
+            <p class="desc-bar-text col-md-8 center-vertical"></p>
+        </div>
+
+        <div class="row desc-bar container-fluid section-margin">
+            <p class="desc-bar-title col-md-4 center-text center-vertical">GitHub</p>
+            <p class="desc-bar-text col-md-8 center-vertical">SE266.05 Repository : <a href="https://github.com/JRamosEEC/SE266" target="_blank"><u>https://github.com/JRamosEEC/SE266</u></a></p>
         </div>
 
         <div class="row desc-bar bar-social center-text container-fluid section-margin">
-            <p class="desc-bar-title col-sm-3 center-text center-vertical">Social Media</p>
-            <div class="desc-bar-text col-sm-9 center-vertical"><a href="https://www.instagram.com/justin_d_ramos/" target="_blank"><img src="images/InstLogo.png" alt="Instagram icon with embedded link" class="social-icon"></a>                     <a href="https://www.facebook.com/justin.ramos.5872" target="_blank"><img src="images/FacebookLogo.png" alt="Facebook icon with embedded link" class="social-icon"></a></div>
+            <p class="desc-bar-title col-lg-4 center-text center-vertical">Social Media</p>
+            <div class="desc-bar-text col-lg-8 center-vertical"><a href="https://www.instagram.com/justin_d_ramos/" target="_blank"><img src="images/InstLogo.png" alt="Instagram icon with embedded link" class="social-icon"></a>                     <a href="https://www.facebook.com/justin.ramos.5872" target="_blank"><img src="images/FacebookLogo.png" alt="Facebook icon with embedded link" class="social-icon"></a></div>
         </div>
     </section>
 
     <footer class="row container-fluid">
-        <div class="footer-bar col-sm-12 center-text center-vertical">&copy; 2021</div>
+        <div id="Footer" class="footer-bar col-sm-12 center-text center-vertical">&copy; 2021</var></div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -71,33 +77,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script>
-        var mytag = document.querySelectorAll("a");
-        var home = document.getElementById("home");
-        var featured = document.getElementById("featured");
-        var gallery = document.getElementById("gallery");
-    
-        for (i = 0; i < mytag.length; i++){
-            mytag[i].addEventListener(`click`, function(e){
-                console.log(e.target.id);
-                if (e.target.id == "homeB"){
-                    home.className = "";
-                    featured.className = "hide";
-                    gallery.className = "hide";
-                }
-    
-                else if (e.target.id == "featuredB"){
-                    featured.className = "";
-                    home.className = "hide";
-                    gallery.className = "hide";
-                }
-    
-                else if (e.target.id == "galleryB"){
-                    gallery.className = "";
-                    home.className = "hide";
-                    featured.className = "hide";
-                }
-            })
-        }
+        var footer = document.getElementById("Footer");
+        var x = new Date(document.lastModified);
+
+        console.log(x);
     </script>
 </body>
 
