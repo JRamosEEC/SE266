@@ -29,6 +29,7 @@
 
 
 <body>
+    <?php ob_start(); ?>
     <form name="patient" method="POST">
         <?php if(!empty($_POST)){ echo $validateString; } ?> 
 
@@ -80,6 +81,7 @@
             </div>
         </div>
     </form>
+    <?php if (!empty($_POST) && strlen($validateString) <= 0){ob_end_clean(); echo "<h1>Summary</h1>"; echo "<ul>" . "Name: " . $fName . " " . $lName . "</ul>" . "<ul>" . "Married: " . $isMarried . "</ul>" . "<ul>" . "Birthday: " . $birthday . "</ul>" . "<ul>" . "Height: " . $hFeet . "ft " . $hInches . "in" . "</ul>" . "<ul>" . "Weight: " . $weight . "lbs" . "</ul>";} ?>
 </body>
 
 </html>

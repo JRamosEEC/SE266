@@ -25,7 +25,6 @@ if(!empty($_POST))
         $validateString .= "<p style='color: red;'>Please provide your birth date</p>";
     }
     else{
-        echo $birthday;
         $date = explode("-", $birthday);
 
         if(!checkdate($date[1], $date[2], $date[0]))
@@ -38,7 +37,6 @@ if(!empty($_POST))
                 $validateString .= "<p style='color: red;'>Birth date can't be in the future</p>";
             }
             else{
-                echo date("d");
                 if($date[0] == date("Y") && $date[1] > date("n"))
                 {
                     $validateString .= "<p style='color: red;'>Birth date can't be in the future</p>";
