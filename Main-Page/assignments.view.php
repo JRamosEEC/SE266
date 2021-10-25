@@ -38,8 +38,8 @@
         <div class="title col-sm-12 center-vertical">Assignments</div>
     
         <ul>
-            <li><a href="../W1-FizzBuzz/index.php" role="button" target="_blank">Week 1 - Fizz Buzz</a></li>
-            <li><a href="#" role="button" target="_blank">Week 2 - Patient</a></li>
+            <li><a href="../W1-FizzBuzz" role="button" target="_blank">Week 1 - Fizz Buzz</a></li>
+            <li><a href="../W2-PatientForm" role="button" target="_blank">Week 2 - Patient</a></li>
             <li><a href="#" role="button" target="_blank">Week 3 - ATM</a></li>
             <li><a href="#" role="button" target="_blank">Week 4</a></li>
             <li><a href="#" role="button" target="_blank">Week 5</a></li>
