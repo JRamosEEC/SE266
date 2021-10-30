@@ -26,28 +26,28 @@
         $sDate = $savings->getStartDate();
         $sBal = $savings->getBalance();
 
-        if(isset($_POST['withdrawChecking']))
+        if(isset($_POST['withdrawChecking']) && !empty($_POST['checkingWithdrawAmount']))
         {
             $cWithdraw = $_POST['checkingWithdrawAmount'];
 
             $checking->withdrawal($cWithdraw);
             $cBal = $checking->getBalance();
         }
-        elseif(isset($_POST['depositChecking']))
+        elseif(isset($_POST['depositChecking']) && !empty($_POST['checkingDepositAmount']))
         {
             $cDeposit = $_POST['checkingDepositAmount'];
 
             $checking->deposit($cDeposit);
             $cBal = $checking->getBalance();
         }
-        elseif(isset($_POST['withdrawSavings']))
+        elseif(isset($_POST['withdrawSavings']) && !empty($_POST['savingsWithdrawAmount']))
         {
             $sWithdraw = $_POST['savingsWithdrawAmount'];
 
             $savings->withdrawal($sWithdraw);
             $sBal = $savings->getBalance();
         }
-        else
+        elseif(isset($_POST['depositSavings']) && !empty($_POST['savingsDepositAmount']))
         {
             $sDeposit = $_POST['savingsDepositAmount'];
 
@@ -100,17 +100,17 @@
        
         <input type="hidden" name="checkingAccountId" value="<?PHP if(!empty($cActID)){echo $cActID;} ?>" />
         <input type="hidden" name="checkingDate" value="<?PHP if(!empty($cDate)){echo $cDate;} ?>" />
-        <input type="hidden" name="checkingBalance" value="<?PHP if(!empty($cBal)){echo $cBal;} ?>" />
+        <input type="hidden" name="checkingBalance" value="<?PHP if(!empty($cBal)){echo $cBal;}else{echo 0;} ?>" />
         <input type="hidden" name="savingsAccountId" value="<?PHP if(!empty($sActID)){echo $sActID;} ?>" />
         <input type="hidden" name="savingsDate" value="<?PHP if(!empty($sDate)){echo $sDate;} ?>" />
-        <input type="hidden" name="savingsBalance" value="<?PHP if(!empty($sBal)){echo $sBal;} ?>" />
+        <input type="hidden" name="savingsBalance" value="<?PHP if(!empty($sBal)){echo $sBal;}else{echo 0;} ?>" />
         
     <h1>ATM</h1>
         <div class="wrapper">  
             <div class="account">
 
                 <li>Account ID: <?PHP if(!empty($cActID)){echo $cActID;} ?></li>
-                <li>Balance: <?PHP if(!empty($cBal)){echo $cBal;} ?></li>
+                <li>Balance: <?PHP if(!empty($cBal)){echo $cBal;}else{echo 0;} ?></li>
                 <li>Account Opened: <?PHP if(!empty($cDate)){echo $cDate;} ?></li>
                     
                 <div class="accountInner">
@@ -126,7 +126,7 @@
             <div class="account">
                
                 <li>Account ID: <?PHP if(!empty($sActID)){echo $sActID;} ?></li>
-                <li>Balance: <?PHP if(!empty($sBal)){echo $sBal;} ?></li>
+                <li>Balance: <?PHP if(!empty($sBal)){echo $sBal;}else{echo 0;} ?></li>
                 <li>Account Opened: <?PHP if(!empty($sDate)){echo $sDate;} ?></li>
 
                 <div class="accountInner">
