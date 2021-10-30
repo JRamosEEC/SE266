@@ -1,12 +1,15 @@
 <?php
+    //Require our account php which contains the classes
     require 'account.php';
 
+    //Checks if the data is empty meaning this is the first run of the page - If so use the default data
     if(empty($_POST))
     {
+        //Create new account objects with default values
         $checking = new CheckingAccount('C123', 1000, '12-20-2019');
         $savings = new SavingsAccount('S123', 5000, '03-20-2020');
 
-
+        //Declare variables and get their values from the class
         $cActID = $checking->getAccountId();
         $cDate = $checking->getStartDate();
         $cBal = $checking->getBalance();
@@ -16,6 +19,7 @@
     }
     else
     {
+        //Get values from the hidden form fields and create the accounts again with the new data
         $checking = new CheckingAccount($_POST['checkingAccountId'], $_POST['checkingBalance'], $_POST['checkingDate']);
         $savings = new SavingsAccount($_POST['savingsAccountId'], $_POST['savingsBalance'], $_POST['savingsDate']);
 
@@ -26,28 +30,31 @@
         $sDate = $savings->getStartDate();
         $sBal = $savings->getBalance();
 
-        if(isset($_POST['withdrawChecking']) && !empty($_POST['checkingWithdrawAmount']))
+        //Determine which submit button is clicked and if the field with it is filled or not and it is an integer
+        if(isset($_POST['withdrawChecking']) && !empty($_POST['checkingWithdrawAmount']) && is_numeric($_POST['checkingWithdrawAmount']))
         {
+            //Declare a temp variable of the field value
             $cWithdraw = $_POST['checkingWithdrawAmount'];
 
+            //Call the class to update the balance and set our variable to the getter value
             $checking->withdrawal($cWithdraw);
             $cBal = $checking->getBalance();
         }
-        elseif(isset($_POST['depositChecking']) && !empty($_POST['checkingDepositAmount']))
+        elseif(isset($_POST['depositChecking']) && !empty($_POST['checkingDepositAmount']) && is_numeric($_POST['checkingDepositAmount']))
         {
             $cDeposit = $_POST['checkingDepositAmount'];
 
             $checking->deposit($cDeposit);
             $cBal = $checking->getBalance();
         }
-        elseif(isset($_POST['withdrawSavings']) && !empty($_POST['savingsWithdrawAmount']))
+        elseif(isset($_POST['withdrawSavings']) && !empty($_POST['savingsWithdrawAmount']) && is_numeric($_POST['savingsWithdrawAmount']))
         {
             $sWithdraw = $_POST['savingsWithdrawAmount'];
 
             $savings->withdrawal($sWithdraw);
             $sBal = $savings->getBalance();
         }
-        elseif(isset($_POST['depositSavings']) && !empty($_POST['savingsDepositAmount']))
+        elseif(isset($_POST['depositSavings']) && !empty($_POST['savingsDepositAmount']) && is_numeric($_POST['savingsDepositAmount']))
         {
             $sDeposit = $_POST['savingsDepositAmount'];
 
