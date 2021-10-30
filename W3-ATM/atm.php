@@ -102,7 +102,7 @@
 </head>
 
 <body>
-
+    
     <form name="ATM" method="post" action="">
        
         <input type="hidden" name="checkingAccountId" value="<?PHP if(!empty($cActID)){echo $cActID;} ?>" />
