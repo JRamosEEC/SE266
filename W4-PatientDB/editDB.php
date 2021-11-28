@@ -6,7 +6,13 @@
 
         $results = [];
 
-        $stmt = $db->prepare("INSERT INTO patients (patientFirstName, patientLastName, patientBirthDate, patientMarried) VALUES ('{$fName}', '{$lName}', '{$birthday}', '{$isMarried}')");
+        $stmt = $db->prepare("INSERT INTO patients (patientFirstName, patientLastName, patientBirthDate, patientMarried) VALUES (:fName, :lName, :birthday, :isMarried)");
+
+        $stmt->bindValue(':fName', $fName);
+        $stmt->bindValue(':lName', $lName);
+        $stmt->bindValue(':birthday', $birthday);
+        $stmt->bindValue(':isMarried', $isMarried);
+
 
         if ($stmt->execute() && $stmt->rowCount() > 0) {
             $results = "Data Added";
@@ -20,7 +26,13 @@
 
         $results = [];
 
-        $stmt = $db->prepare("UPDATE patients SET patientFirstName = '{$fName}', patientLastName = '{$lName}', patientBirthDate = '{$birthday}', patientMarried = '{$isMarried}' WHERE id = '{$patientId}'");
+        $stmt = $db->prepare("UPDATE patients SET patientFirstName = :fName, patientLastName = :lName, patientBirthDate = :birthday, patientMarried = :isMarried WHERE id = :patientId");
+
+        $stmt->bindValue(':fName', $fName);
+        $stmt->bindValue(':lName', $lName);
+        $stmt->bindValue(':birthday', $birthday);
+        $stmt->bindValue(':isMarried', $isMarried);
+        $stmt->bindValue(':patientId', $patientId);
 
         if ($stmt->execute() && $stmt->rowCount() > 0) {
             $results = "Data Updated";
@@ -34,7 +46,9 @@
 
         $results = [];
 
-        $stmt = $db->prepare("DELETE FROM patients WHERE id = {$id}");
+        $stmt = $db->prepare("DELETE FROM patients WHERE id = :id");
+
+        $stmt->bindValue(':id', $id);
 
         if ($stmt->execute() && $stmt->rowCount() > 0) {
             $results = "Data Removed";
