@@ -41,7 +41,7 @@
             <li><a href="../W1-FizzBuzz" role="button" target="_blank">Week 1 - Fizz Buzz</a></li>
             <li><a href="../W2-PatientForm" role="button" target="_blank">Week 2 - Patient</a></li>
             <li><a href="../W3-ATM/atm.php" role="button" target="_blank">Week 3 - ATM</a></li>
-            <li><a href="#" role="button" target="_blank">Week 4</a></li>
+            <li><a href="../W4-PatientDB/viewPatients.php" role="button" target="_blank">Week 4 - Patient EHR CRUD</a></li>
             <li><a href="#" role="button" target="_blank">Week 5</a></li>
             <li><a href="#" role="button" target="_blank">Week 6</a></li>
             <li><a href="#" role="button" target="_blank">Week 7</a></li>
