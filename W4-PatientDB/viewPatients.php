@@ -1,5 +1,4 @@
 <?php
-    include (__DIR__ . "/db.php");
     require (__DIR__ . "/editDB.php");
 
     $patientData = getPatients();
