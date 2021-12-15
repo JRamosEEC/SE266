@@ -1,5 +1,5 @@
 <?php
-    include (__DIR__ . "/db.php");
+    require (__DIR__ . "/db.php");
 
     function addPatients ($fName, $lName, $isMarried, $birthday) {
         global $db;
